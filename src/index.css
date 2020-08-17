@@ -35,8 +35,51 @@ body {
 }
 
 /* upload form styles */
+.upload-form {
+  margin: 30px auto 10px;
+  text-align: center;
+}
+
+.upload-form__btn input {
+  height: 0;
+  width: 0;
+  opacity: 0;
+}
+
+.upload-form__btn {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--primary);
+  border-radius: 50%;
+  margin: 10px auto;
+  line-height: 30px;
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.upload-form__btn:hover {
+  background-color: var(--primary);
+  color: white;
+}
+
+.upload-form .output {
+  height: 60px;
+  font-size: 0.8rem;
+}
+
+.upload-form .error {
+  color: var(--error);
+}
 
 /* progress bar styles */
+.progress-bar {
+  height: 5px;
+  background-color: var(--primary);
+  margin-top: 20px;
+}
 
 /* image grid styles */
 
