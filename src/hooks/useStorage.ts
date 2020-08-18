@@ -5,6 +5,7 @@ import {
   timestamp,
 } from "../firebase/config";
 import * as firebase from "firebase";
+import { collectionName } from "../contants";
 
 const useStorage = (file: File) => {
   const [progress, setProgress] = useState(0);
@@ -14,7 +15,7 @@ const useStorage = (file: File) => {
   useEffect(() => {
     // upload refrerences
     const storageRef = projectStorage.ref(file.name);
-    const collectionRef = projectFireStore.collection("images");
+    const collectionRef = projectFireStore.collection(collectionName);
 
     // upload
     storageRef.put(file).on(
